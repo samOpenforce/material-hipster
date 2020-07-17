@@ -1,0 +1,12 @@
+version: '2'
+services:
+  hardware-postgresql:
+    image: postgres:12.3
+    # volumes:
+    #     - ~/volumes/jhipster/hardware/postgresql/:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=hardware
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    ports:
+      - 5432:5432
