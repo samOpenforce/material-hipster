@@ -9,16 +9,29 @@
     (closed)="events.push('close!')"
   >
     <mat-toolbar color="primary"></mat-toolbar>
-    <div fxLayout="row" fxLayoutAlign="end start">
-      <p><button mat-button class="sidenav-toggle" (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <div>
+        <mat-list>
+          <mat-list-item> Table </mat-list-item>
+          <mat-list-item> Custom menu </mat-list-item>
+          <mat-list-item> Dialogs </mat-list-item>
+        </mat-list>
+      </div>
+      <div>
+        <button mat-stroked-button color="primary" class="sidenav-toggle" (click)="sidenav.toggle()">
+          <mat-icon>keyboard_arrow_right</mat-icon>
+        </button>
+      </div>
     </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="accent"></mat-toolbar>
+    <mat-toolbar color="accent"><h1 class="mat-display-1">Hardware Konfigurator</h1></mat-toolbar>
     <!--     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
     <div fxLayout="row" fxLayoutAlign="end start">
-      <p><button mat-button class="sidenav-toggle" (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+      <button mat-stroked-button color="accent" class="sidenav-toggle" (click)="sidenav.toggle()">
+        <mat-icon>keyboard_arrow_left</mat-icon>
+      </button>
     </div>
     <!--    <p>Events:</p> -->
     <!--     <div class="example-events">
