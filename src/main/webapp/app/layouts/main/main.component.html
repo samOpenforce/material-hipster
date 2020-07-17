@@ -26,17 +26,36 @@
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="accent"><h1 class="mat-display-1">Hardware Konfigurator</h1></mat-toolbar>
+    <mat-toolbar color="primary"><h1 class="display-4">Hardware Konfigurator</h1></mat-toolbar>
     <!--     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
-    <div fxLayout="row" fxLayoutAlign="end start">
-      <button mat-stroked-button color="accent" class="sidenav-toggle" (click)="sidenav.toggle()">
-        <mat-icon>keyboard_arrow_left</mat-icon>
-      </button>
+    <div class="main-content">
+    	<div fxLayout="row" fxLayoutAlign="end start">
+    	  <button mat-stroked-button color="primary" class="sidenav-toggle" (click)="sidenav.toggle()">
+    	    <mat-icon>keyboard_arrow_left</mat-icon>
+    	  </button>
+    	</div>
+    	<div fxLayout="column"> 
+    	    <span class="mat-display-4">mat-display-4</span>
+    	    <span class="mat-display-3">mat-display-3</span>
+    	    <span class="mat-display-2">mat-display-2</span>   
+    	    <span class="mat-display-1">mat-display-1</span>
+    	    <span class="mat-headline">mat-headline</span>
+    	    <span class="mat-title">mat-title</span>
+    	    <span class="mat-h1">mat-h1</span>
+    	    <span class="mat-h2">mat-h2</span>
+    	    <span class="mat-h3">mat-h3</span>
+            <span class="mat-h4">mat-h4</span>            
+            <span class="mat-body">mat-body</span>
+            <span class="mat-body-strong">mat-body-strong</span>
+            <span class="mat-caption">mat-caption</span>
+    	  </div>
+    	</div>
+    
+    	<!--    <p>Events:</p> -->
+    	<!--     <div class="example-events">
+    	  <div *ngFor="let e of events">{{ e }}</div>
+    	</div> -->
+    	<router-outlet></router-outlet>
     </div>
-    <!--    <p>Events:</p> -->
-    <!--     <div class="example-events">
-      <div *ngFor="let e of events">{{ e }}</div>
-    </div> -->
-    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
