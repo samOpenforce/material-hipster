@@ -1,13 +1,29 @@
-<jhi-page-ribbon></jhi-page-ribbon>
-
-<div>
-    <router-outlet name="navbar"></router-outlet>
-</div>
-
-<div class="container-fluid">
-    <div class="card jh-card">
-        <router-outlet></router-outlet>
+<mat-sidenav-container class="app-container">
+  <mat-sidenav
+    class="sidenav-menu"
+    #sidenav
+    mode="over"
+    position="end"
+    [(opened)]="opened"
+    (opened)="events.push('open!')"
+    (closed)="events.push('close!')"
+  >
+    <mat-toolbar color="primary"></mat-toolbar>
+    <div fxLayout="row" fxLayoutAlign="end start">
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
     </div>
+  </mat-sidenav>
 
-    <jhi-footer></jhi-footer>
-</div>
+  <mat-sidenav-content>
+    <mat-toolbar color="accent"></mat-toolbar>
+    <!--     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
+    <div fxLayout="row" fxLayoutAlign="end start">
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    </div>
+    <!--    <p>Events:</p> -->
+    <!--     <div class="example-events">
+      <div *ngFor="let e of events">{{ e }}</div>
+    </div> -->
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -10,6 +10,8 @@ import { AccountService } from 'app/core/auth/account.service';
   templateUrl: './main.component.html',
 })
 export class MainComponent implements OnInit {
+  opened = false;
+  events: string[] = [];
   private renderer: Renderer2;
 
   constructor(

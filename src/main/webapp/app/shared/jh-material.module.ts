@@ -8,9 +8,34 @@ import { NgModule } from '@angular/core';
 
 // component imports
 import { MatSliderModule } from '@angular/material/slider';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
-  imports: [A11yModule, CdkStepperModule, CdkTableModule, CdkTreeModule, DragDropModule, ScrollingModule, MatSliderModule],
-  exports: [A11yModule, CdkStepperModule, CdkTableModule, CdkTreeModule, DragDropModule, ScrollingModule, MatSliderModule],
+  imports: [
+    A11yModule,
+    CdkStepperModule,
+    CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
+    ScrollingModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+  ],
+  exports: [
+    A11yModule,
+    CdkStepperModule,
+    CdkTableModule,
+    CdkTreeModule,
+    DragDropModule,
+    ScrollingModule,
+    MatSliderModule,
+    MatSidenavModule,
+    MatCheckboxModule,
+    MatToolbarModule,
+  ],
 })
 export class JhMaterialModule {}
