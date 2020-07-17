@@ -3,7 +3,11 @@
 }
 
 .sidenav-menu {
-  width: 600px;
+  width: 346px;
+}
+
+.sidenav-menu-content {
+  padding: 16px;
 }
 
 .main-content {
@@ -11,9 +15,5 @@
 }
 
 .mat-toolbar {
-  height: 120px;
-}
-
-.sidenav-toggle {
-  margin: 16px;
+  height: 72px;
 }
