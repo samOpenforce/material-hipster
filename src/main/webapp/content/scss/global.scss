@@ -1,9 +1,15 @@
+button:focus {
+  outline: none;
+}
+
 .app-container {
   height: 100vh;
 }
 
 .sidenav-menu {
   width: 346px;
+  height: 100%;
+  background-color: #f6f6f6;
 }
 
 .sidenav-menu-content {
@@ -16,4 +22,24 @@
 
 .mat-toolbar {
   height: 72px;
+}
+
+.app-heading {
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button-lg {
+  margin: 8px;
+  width: 130px;
+  height: 60px;
+  font-size: 1.1rem;
+}
+
+.mat-button,
+.mat-icon-button,
+.mat-stroked-button,
+.mat-flat-button {
+  border-radius: 0;
 }

@@ -1,4 +1,4 @@
-<mat-sidenav-container class="app-container">
+<mat-sidenav-container fullscreen class="app-container">
   <mat-sidenav
     class="sidenav-menu"
     #sidenav
@@ -8,25 +8,39 @@
     (opened)="events.push('open!')"
     (closed)="events.push('close!')"
   >
-    <mat-toolbar color="primary"></mat-toolbar>
-    <div class="sidenav-menu-content" fxLayout="row" fxLayoutAlign="space-between">
-      <div>
-        <mat-list>
-          <mat-list-item> Table </mat-list-item>
-          <mat-list-item> Custom menu </mat-list-item>
-          <mat-list-item> Dialogs </mat-list-item>
-        </mat-list>
+    <div fxLayout="column">
+      <mat-toolbar color="primary"></mat-toolbar>
+      <div fxLayout="row" fxLayoutAlign="space-between">
+        <div>
+          <mat-list>
+            <mat-list-item> Table </mat-list-item>
+            <mat-list-item> Custom menu </mat-list-item>
+            <mat-list-item> Dialogs </mat-list-item>
+          </mat-list>
+        </div>
+        <div>
+          <button mat-stroked-button color="primary" class="sidenav-toggle" (click)="sidenav.toggle()">
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </button>
+        </div>
       </div>
-      <div>
-        <button mat-stroked-button color="primary" class="sidenav-toggle" (click)="sidenav.toggle()">
-          <mat-icon>keyboard_arrow_right</mat-icon>
-        </button>
+      <div fxLayout="row" fxLayoutAlign="center center">
+        <div>
+          <button mat-stroked-button class="nav-button-lg" color="primary">
+            BACK
+          </button>
+        </div>
+        <div>
+          <button mat-flat-button class="nav-button-lg" color="primary">
+            NEXT
+          </button>
+        </div>
       </div>
     </div>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary"><h1 class="display-4">Hardware Konfigurator</h1></mat-toolbar>
+    <mat-toolbar color="primary"><p class="app-heading">Hardwarekonfigurator</p></mat-toolbar>
     <!--     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
     <div class="main-content">
       <div fxLayout="row" fxLayoutAlign="end start">
