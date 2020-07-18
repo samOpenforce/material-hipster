@@ -4,10 +4,12 @@ import { Router, ActivatedRouteSnapshot, NavigationEnd, NavigationError } from '
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 
 import { AccountService } from 'app/core/auth/account.service';
+import { SidenavService } from '../../shared/services/sidenav.service';
 
 @Component({
   selector: 'jhi-main',
   templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
   opened = false;
@@ -19,7 +21,8 @@ export class MainComponent implements OnInit {
     private titleService: Title,
     private router: Router,
     private translateService: TranslateService,
-    rootRenderer: RendererFactory2
+    rootRenderer: RendererFactory2,
+    private sidenavService: SidenavService
   ) {
     this.renderer = rootRenderer.createRenderer(document.querySelector('html'), null);
   }
@@ -41,6 +44,11 @@ export class MainComponent implements OnInit {
       this.updateTitle();
 
       this.renderer.setAttribute(document.querySelector('html'), 'lang', langChangeEvent.lang);
+    });
+
+    this.sidenavService.changeEmitted$.subscribe(change => {
+      this.opened = change;
+      this.sidenavService.open = change;
     });
   }
 

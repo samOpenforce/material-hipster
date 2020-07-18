@@ -1,0 +1,25 @@
+<div fxLayout="column" style="height: 100%;">
+  <mat-toolbar color="primary"></mat-toolbar>
+  <div fxLayout="row" fxLayoutAlign="start space-between">
+    <div class="sidenav-control-container" fxFlex fxLayoutAlign="end center">
+      <div class="sidenav-text" fxFlex fxLayoutAlign="start center">
+        <span class="mat-h2" color="primary">Ihre Serverkonfiguration</span>
+      </div>
+      <div class="sidenav-button" (click)="toggleSidenav()" fxFlex fxLayoutAlign="center center">
+        <mat-icon>keyboard_arrow_right</mat-icon>
+      </div>
+    </div>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <div>
+      <button mat-stroked-button class="nav-button-lg" color="primary">
+        BACK
+      </button>
+    </div>
+    <div>
+      <button mat-flat-button class="nav-button-lg" color="primary">
+        NEXT
+      </button>
+    </div>
+  </div>
+</div>

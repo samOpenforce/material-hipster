@@ -31,6 +31,7 @@
   },
   "defaultProject": "hardware",
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "5f7dd365-6031-487b-8fd6-83d8f2a8b394"
   }
 }

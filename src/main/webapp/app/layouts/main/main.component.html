@@ -8,65 +8,22 @@
     (opened)="events.push('open!')"
     (closed)="events.push('close!')"
   >
-    <div fxLayout="column">
-      <mat-toolbar color="primary"></mat-toolbar>
-      <div fxLayout="row" fxLayoutAlign="space-between">
-        <div>
-          <mat-list>
-            <mat-list-item> Table </mat-list-item>
-            <mat-list-item> Custom menu </mat-list-item>
-            <mat-list-item> Dialogs </mat-list-item>
-          </mat-list>
-        </div>
-        <div>
-          <button mat-stroked-button color="primary" class="sidenav-toggle" (click)="sidenav.toggle()">
-            <mat-icon>keyboard_arrow_right</mat-icon>
-          </button>
-        </div>
-      </div>
-      <div fxLayout="row" fxLayoutAlign="center center">
-        <div>
-          <button mat-stroked-button class="nav-button-lg" color="primary">
-            BACK
-          </button>
-        </div>
-        <div>
-          <button mat-flat-button class="nav-button-lg" color="primary">
-            NEXT
-          </button>
-        </div>
-      </div>
-    </div>
+    <router-outlet name="sidenav-outlet"></router-outlet>
   </mat-sidenav>
 
   <mat-sidenav-content>
     <mat-toolbar color="primary"><p class="app-heading">Hardwarekonfigurator</p></mat-toolbar>
-    <!--     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
+
     <div class="main-content">
-      <div fxLayout="row" fxLayoutAlign="end start">
-        <button mat-stroked-button color="primary" class="sidenav-toggle" (click)="sidenav.toggle()">
-          <mat-icon>keyboard_arrow_left</mat-icon>
-        </button>
-      </div>
-      <div fxLayout="column">
-        <span class="mat-display-4">mat-display-4</span>
-        <span class="mat-display-3">mat-display-3</span>
-        <span class="mat-display-2">mat-display-2</span>
-        <span class="mat-display-1">mat-display-1</span>
-        <span class="mat-headline">mat-headline</span>
-        <span class="mat-title">mat-title</span>
-        <span class="mat-h1">mat-h1</span>
-        <span class="mat-h2">mat-h2</span>
-        <span class="mat-h3">mat-h3</span>
-        <span class="mat-h4">mat-h4</span>
-        <span class="mat-body">mat-body</span>
-        <span class="mat-body-strong">mat-body-strong</span>
-        <span class="mat-caption">mat-caption</span>
-      </div>
-      <router-outlet></router-outlet>
+      <router-outlet name="stepper-outlet"></router-outlet>
+
+      <router-outlet name="filter-outlet"></router-outlet>
+
+      <router-outlet name="table-outlet"></router-outlet>
     </div>
 
     <!--    <p>Events:</p> -->
+    <!--     <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
     <!--     <div class="example-events">
     	  <div *ngFor="let e of events">{{ e }}</div>
     	</div> -->

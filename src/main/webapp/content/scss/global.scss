@@ -1,3 +1,5 @@
+@import './colors';
+
 button:focus {
   outline: none;
 }
@@ -12,12 +14,7 @@ button:focus {
   background-color: #f6f6f6;
 }
 
-.sidenav-menu-content {
-  padding: 16px;
-}
-
 .main-content {
-  padding: 16px;
 }
 
 .mat-toolbar {
@@ -42,4 +39,33 @@ button:focus {
 .mat-stroked-button,
 .mat-flat-button {
   border-radius: 0;
+}
+
+.flexbox-container {
+  display: flex;
+}
+button.sidenav-toggle {
+  max-width: 40px;
+  height: 100px;
+}
+.sidenav-text {
+  max-width: 306px;
+  height: 100px;
+  padding-left: 16px;
+  background-color: #f6f6f6;
+}
+.sidenav-control-container {
+  border-left: 2px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  max-width: 346px;
+  height: 100%;
+  background-color: #f6f6f6;
+}
+
+.sidenav-button {
+  border-left: 2px solid #e5e5e5;
+  max-width: 40px;
+  height: 100px;
+  background-color: #f6f6f6;
+  cursor: pointer;
 }
