@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { navbarRoute } from './layouts/navbar/navbar.route';
+// import { navbarRoute } from './layouts/navbar/navbar.route';
 import { errorRoute } from './layouts/error/error.route';
 import { appRoutes } from './app.routes';
 /* import { filterRoute } from './filter/filter.route';

@@ -1,17 +1,22 @@
 @import './colors';
-
+body,
+html {
+  overflow: hidden !important;
+  max-height: 100vh; //100% view height
+  width: 100vw; // 100% view width
+}
 button:focus {
   outline: none;
 }
 
 .app-container {
-  height: 100vh;
+  max-height: calc(100vh);
+  overflow: none;
 }
 
 .sidenav-menu {
   width: 346px;
   height: 100%;
-  background-color: #f6f6f6;
 }
 
 .main-content {
@@ -68,4 +73,8 @@ button.sidenav-toggle {
   height: 100px;
   background-color: #f6f6f6;
   cursor: pointer;
+}
+
+.mat-drawer-container {
+  background-color: #fff;
 }
